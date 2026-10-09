@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Page Insights & Scraper",
+  "version": "1.0",
+  "description": "Scrapes page metrics, injects a badge, and persists data.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
